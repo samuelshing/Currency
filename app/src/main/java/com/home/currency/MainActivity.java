@@ -27,16 +27,16 @@ public class MainActivity extends AppCompatActivity {
 		String ntd = etNTD.getText().toString();
 		if (ntd.equals("")) {
 			new AlertDialog.Builder(this)
-					.setTitle("Problem")
-					.setMessage("Please enter you NTD amount.")
-					.setPositiveButton("OK", null)
+					.setTitle(R.string.problem)
+					.setMessage(R.string.please_enter_your_ntd_amount)
+					.setPositiveButton(R.string.ok, null)
 					.show();
 		} else {
 			double us = Double.valueOf(ntd) / 30.9;
 			new AlertDialog.Builder(this)
-					.setTitle("Result")
-					.setMessage("USD is " + String.format("%.2f", us))
-					.setPositiveButton("OK", null)
+					.setTitle(R.string.result)
+					.setMessage(getString(R.string.usd_is) + String.format("%.2f", us))
+					.setPositiveButton(R.string.ok, null)
 					.show();
 		}
 	}
